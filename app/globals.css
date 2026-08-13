@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Warrior palette — dark, commanding, heritage-rooted */
+  --color-charcoal-950: #0c0a08;
+  --color-charcoal-900: #14110d;
+  --color-charcoal-800: #1d1913;
+  --color-charcoal-700: #2a241b;
+
+  --color-saffron-400: #ffa03c;
+  --color-saffron-500: #ff7a1a;
+  --color-saffron-600: #e8590c;
+  --color-saffron-700: #c2410c;
+
+  --color-crimson-500: #c22b2b;
+  --color-crimson-600: #9f1d1d;
+  --color-crimson-700: #7f1616;
+  --color-crimson-900: #450a0a;
+
+  --color-bronze-400: #d4a95c;
+  --color-bronze-500: #c8963e;
+  --color-bronze-600: #a3762c;
+
+  --color-parchment-100: #f5eee1;
+  --color-parchment-300: #e3d5bd;
+  --color-parchment-500: #b9a888;
+
+  --font-display: var(--font-cinzel), serif;
+  --font-heading: var(--font-oswald), sans-serif;
+  --font-sans: var(--font-body), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-charcoal-950);
+  color: var(--color-parchment-100);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-saffron-600);
+  color: var(--color-charcoal-950);
+}
+
+/* Angular, blade-like cuts instead of soft rounded corners */
+.clip-blade {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+.clip-blade-sm {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+/* Diagonal slash divider between sections */
+.slash-top {
+  clip-path: polygon(0 3rem, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Subtle battle-worn texture */
+.texture-grain {
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 122, 26, 0.06), transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(159, 29, 29, 0.08), transparent 50%);
+}
+
+/* Saffron flame gradient text */
+.text-flame {
+  background: linear-gradient(100deg, #ffa03c 0%, #ff7a1a 45%, #c22b2b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
