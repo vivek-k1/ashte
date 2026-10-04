@@ -8,18 +8,61 @@ export const metadata = {
 };
 
 const board = [
-  { name: "Shri. Rajendra Patil", role: "President", img: "/pics/shivaji-1.webp" },
-  { name: "Shri. Anil Deshmukh", role: "Vice President", img: "/pics/shivaji-2.webp" },
-  { name: "Shri. Suresh Jadhav", role: "General Secretary", img: "/pics/shivaji-3.webp" },
-  { name: "Smt. Meena Kulkarni", role: "Joint Secretary", img: "/pics/shivaji-4.webp" },
-  { name: "Shri. Vikram Shinde", role: "Treasurer", img: "/pics/shivaji-5.webp" },
-  { name: "Shri. Prakash More", role: "Technical Director", img: "/pics/shivaji-6.webp" },
-  { name: "Coach Ramesh Salunkhe", role: "Chief Coach", img: "/pics/shivaji-7.webp" },
-  { name: "Shri. Nitin Pawar", role: "Events Director", img: "/pics/shivaji-8.webp" },
-  { name: "Smt. Kavita Bhosale", role: "Women’s Wing Head", img: "/pics/shivaji-hero.webp" },
-  { name: "Shri. Deepak Chavan", role: "State Relations", img: "/pics/shivaji-2.webp" },
-  { name: "Shri. Mahesh Gaikwad", role: "Media & Outreach", img: "/pics/shivaji-3.webp" },
-  { name: "Shri. Santosh Kale", role: "Youth Development", img: "/pics/shivaji-4.webp" },
+  {
+    name: "MP Sree Ramdasji Tadas",
+    role: "President",
+    img: "/People/ramdasji-tadas.jpg",
+  },
+  {
+    name: "Dr. Sambhaji Bhosale",
+    role: "Vice President",
+    img: "/People/sambhaji-bhosale.jpg",
+  },
+  {
+    name: "Rajesh Talmale",
+    role: "General Secretary",
+    img: "/People/rajesh-talmale.jpg",
+  },
+  {
+    name: "Raj Kumar",
+    role: "Secretary General",
+    img: "/People/raj-kumar.jpg",
+  },
+  {
+    name: "Dharmendra Gurjar",
+    role: "Executive Member",
+    img: "/People/dharmendra-gurjar.jpg",
+  },
+  {
+    name: "Trishala Nandan Jain",
+    role: "Executive Member",
+    img: "/People/trishala-nandan-jain.jpg",
+  },
+  {
+    name: "Mohammad Hassan",
+    role: "Executive Member",
+    img: "/People/mohammad-hassan.jpg",
+  },
+  {
+    name: "Huidrom Singh",
+    role: "Executive Member",
+    img: "/People/huidrom-singh.jpg",
+  },
+  {
+    name: "P. Senthil Nathan",
+    role: "Executive Member",
+    img: "/People/p-senthil-nathan.jpg",
+  },
+  {
+    name: "K. Harikrishnan",
+    role: "Executive Member",
+    img: "/People/k-harikrishnan.jpg",
+  },
+  {
+    name: "Vijay Sharma",
+    role: "Executive Member",
+    img: "/People/vijay-sharma.jpg",
+  },
 ];
 
 export default function GoverningBoardPage() {
@@ -36,9 +79,8 @@ export default function GoverningBoardPage() {
               Governing Board
             </h1>
             <p className="mt-4 max-w-2xl text-parchment-500">
-              The council that steers Ashtedo India — photo and position of each
-              officer. Replace placeholder portraits with official board photos
-              when ready.
+              The council that steers Ashtedo India — officers and executive
+              members of Mardani Khel / Ashtedu Akhada.
             </p>
           </Reveal>
         </div>
@@ -46,7 +88,10 @@ export default function GoverningBoardPage() {
 
       <section className="bg-charcoal-950 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading kicker="10+ Officers" title="Meet the Board" />
+          <SectionHeading
+            kicker={`${board.length} Officers`}
+            title="Meet the Board"
+          />
 
           <StaggerGroup
             className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
@@ -61,7 +106,7 @@ export default function GoverningBoardPage() {
                       alt={m.name}
                       label={m.role}
                       className="h-full w-full"
-                      imgClassName="object-cover grayscale transition duration-300 group-hover:grayscale-0 group-hover:scale-105"
+                      imgClassName="object-cover object-top transition duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/80 to-transparent p-4 pt-16">
                       <p className="font-heading text-xs uppercase tracking-[0.25em] text-saffron-500">
